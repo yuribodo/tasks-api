@@ -4,7 +4,8 @@ import { json } from './middlewares/json.js'
 import { routes } from './middlewares/routes.js'
 import { extractQueryParams } from './utils/extract-query-params.js'
 
-const server = http.createServer( async  (req, res) => {
+
+const server = http.createServer(async  (req, res) => {
     const {method, url} = req
 
     await json(req, res)
@@ -14,7 +15,6 @@ const server = http.createServer( async  (req, res) => {
     })
 
     console.log(route)
-
     if (route) {
         const routeParams = req.url.match(route.path)
 
