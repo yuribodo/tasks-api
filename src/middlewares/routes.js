@@ -82,17 +82,22 @@ export const routes = [
         method: 'PATCH',
         path: buildRoutePath('/tasks/:id/complete'),
         handler: (req, res) => {
-            const { search } = req.query
+            const { id } = req.params
 
-            const tasks = database.select('tasks', search ? {
-                title: search,
-                description: search,
-                completed_at: search,
-                created_at: search,
-                updated_at: search,
-            } : null);
+            const task = database.selectById("tasks", id )
 
-            return res.end(JSON.stringify(tasks));
+            if (!task) {
+                return res.status(404).end('Task not foud')
+            }
+
+            const updatedTask = {
+                ...task,
+                completed_at: task.completed_at ? null : new Date()
+            }
+
+            database.update('tasks', id, updatedTask)
+
+            return res.writeHead(204).end()
         },
     },
 ]
