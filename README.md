@@ -1,6 +1,6 @@
 # Task Management API
 
-The **Task Management API** is a simple yet efficient tool designed to help users manage tasks in a database. Built using **JavaScript** and **Node.js**, this API allows users to create, list, update, remove, and mark tasks as complete or incomplete. It provides a lightweight solution for managing tasks without requiring complex infrastructure or external databases. The API leverages a simple **JSON database** for storing task data, making it ideal for small projects or as a learning resource for developers looking to practice building RESTful APIs with Node.js. This project was developed as part of **Challenge 01** from the **Rocketseat Node.js course**, focusing on the core concepts of backend development and task management using basic Node.js features.
+The Task Management API is a simple tool that allows users to manage tasks in a database. Built with JavaScript and Node.js, it enables users to create, list, update, delete, and mark tasks as complete or incomplete. This API uses a JSON database to store data, making it lightweight and easy to set up for small projects or learning purposes.
 
 # Table of Contents
 
@@ -18,6 +18,12 @@ The **Task Management API** is a simple yet efficient tool designed to help user
 7. [Conclusion](#conclusion)
 
 ---
+
+## Introduction
+
+This API was developed as part of Challenge 01 from the [Rocketseat](https://github.com/rocketseat-education) Node.js course. It focuses on the core concepts of backend development, providing a hands-on approach to building a RESTful API with Node.js. The Task Management API allows users to perform common task management actions such as creating new tasks, updating existing ones, and tracking their completion status.
+
+The API is designed to be simple yet functional, with no external databases or complex infrastructure required. Instead, it leverages a JSON database to store task data, making it ideal for small projects, personal use, or as a learning resource for developers interested in backend development with Node.js.
 
 ## Structure of a Task
 Each task has the following properties:
@@ -90,7 +96,7 @@ Before you start, ensure you have `node` and `npm` installed on your machine.
 ## Conclusion
 
 The Task Management API provides a simple and efficient solution for managing tasks using a JSON database. With features to create, list, update, delete, and mark tasks as complete, the API is easy to use and configure. The data import functionality from a CSV file makes data migration seamless. This API serves as an excellent foundation for those starting with API development and can be easily expanded for larger projects.
----
+
 
 If you find any bugs or have a feature request, please open an issue on [GitHub](https://github.com/yuribodo/tasks-api/issues).
 
